@@ -113,7 +113,7 @@ I2CM_SEND_ACK:
 
   _PREPARE_NACK:
     ser tmp
-	  rjmp _TRANSFER
+    rjmp _TRANSFER
 
   _PREPARE_ACK:
     clr tmp
