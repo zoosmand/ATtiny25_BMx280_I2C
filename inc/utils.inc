@@ -12,7 +12,7 @@ LED0_BLINK:
   rjmp _LED0PIN_H
   cbi LEDPORT, LED0PIN
   ret
-	_LED0PIN_H:
+  _LED0PIN_H:
     sbi LEDPORT, LED0PIN
     ret
 
@@ -46,7 +46,7 @@ DELAY:
   out TCNT0, tmp
   _DELAY_:
     in tmp, TCNT0
-	cp tmp, dRate
-	brne _DELAY_
+    cp tmp, dRate
+    brne _DELAY_
   sei
   ret
