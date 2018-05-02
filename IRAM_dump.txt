@@ -1,0 +1,7 @@
+data 0x0060  6d 6f de 68 32 00 80 93  moЮh2.Ђ“
+data 0x0068  3f d6 d0 0b 45 17 d6 ff  ?ЦР.E.Ця
+data 0x0070  f9 ff ac 26 0a d8 bd 10  щя¬&.ШЅ.
+data 0x0078  00 4b 6f 01 00 13 23 03  .Ko...#.
+data 0x0080  6f 01 00 13 23 03 1e dc  o...#..Ь
+data 0x0088  41 ff ff ff ff ff ff ff  Aяяяяяяя
+data 0x0090  59 03 00 83 e2 00 5b 79  Y..ѓв.[y
