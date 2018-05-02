@@ -97,12 +97,12 @@ BMx280_READ:
   rcall I2CM_SEND_ADDRESS
 
   _READ_DATA:
-	cp R0, R1
-	brne _READ_DATA_PACKET
+    cp R0, R1
+    brne _READ_DATA_PACKET
     sbr _EREG_, (1<<_I2CANF_)
-	_READ_DATA_PACKET:
+    _READ_DATA_PACKET:
       rcall I2CM_RECEIVE_PACKET   
-	  st Y+, rxByte 
+      st Y+, rxByte 
     dec R0
     brne _READ_DATA
   rcall I2CM_STOP
