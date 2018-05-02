@@ -54,11 +54,11 @@ MAIN:
   sbrs _EREG_, _MIF_
   rjmp _GO_TO_SLEEP
   cbr _EREG_, (1<<_MIF_)
-	rcall MAKE_MEASURE
+  rcall MAKE_MEASURE
 
   _RESTORE_TIMER:
     rcall CLEAR_TIMER
-	  rcall INIT_TIMER
+    rcall INIT_TIMER
 
   _GO_TO_SLEEP:
     in tmp, MCUCR
@@ -80,9 +80,9 @@ MAIN:
 
 ;/*********************************** MEASURMENT *********************************/
 MAKE_MEASURE:
-	sbrc _EREG_, _I2CERF_
-	rcall INIT_BMx280
-	BMx280_WRITE_MACRO 0x25, 0xf4 ; Datasheet 3.3.3 Forced mode. For a next measurement, forced mode needs to be selected again.
+  sbrc _EREG_, _I2CERF_
+  rcall INIT_BMx280
+  BMx280_WRITE_MACRO 0x25, 0xf4 ; Datasheet 3.3.3 Forced mode. For a next measurement, forced mode needs to be selected again.
   BMx280_READ_MACRO BMx280_data, 0xf7, 0x08 ; Read data registers, count 0x08 for BME280 or 0x06 for BMP280
   ret
 
